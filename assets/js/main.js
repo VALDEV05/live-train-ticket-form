@@ -12,12 +12,26 @@ creo una variabile per ogni form che ho:
     - bottone genera
     - bottone annulla 
  */
+
+//selezioni dom
 const fullNameInputElement = document.getElementById("full-name");
 const distanceInputElement = document.getElementById("distance");
 const ageSelectElement = document.getElementById("age");
 const generateButtonElement = document.getElementById('generate');
 const cancelButtonElement = document.getElementById('cancel');
+const ticketPlaceName = document.getElementById('ticket_name');
+const ticketPlacediscount = document.getElementById('ticket_discount');
+const ticketPlaceNumberCarriage = document.getElementById('number_carriage');
+const ticketPlaceCpNumber = document.getElementById('cp_number');
+const ticketPlacePrice = document.getElementById('ticket_price');
 
+function randomInteger(min, max) {
+    let rand = min + Math.random() * (max - min);
+    return Math.round(rand);
+}
+//generatori random
+const numberCp = randomInteger(90000, 100000);
+const numberCarriage = randomInteger(1, 5);
 //Quando clicca mi genera i dati biglietto
 generateButtonElement.addEventListener("click", function () {
     const fullName = fullNameInputElement.value;
@@ -38,22 +52,35 @@ generateButtonElement.addEventListener("click", function () {
 
     //calcola il prezzo dei biglietti scontati
     if (age == 'minorenne') {
-        console.log('va applicato il 20%')
-        let new_price = (price - (price * 0.20)).toFixed(2)
-        console.log(new_price)
+        let new_price = (price - (price * 0.20)).toFixed(2) + ' €'
+        ticketPlacediscount.innerHTML = 'biglietto under18'
+        ticketPlacePrice.innerHTML = new_price
 
     } else if (age == 'over65') {
-        console.log('va applicato il 40%')
-        let new_price = (price - (price * 0.40)).toFixed(2)
-        console.log(new_price)
+        let new_price = (price - (price * 0.40)).toFixed(2) + ' €'
+        ticketPlacediscount.innerHTML = 'biglietto over65'
+        ticketPlacePrice.innerHTML = new_price
+
     } else {
         console.log('nessuno sconto');
         console.log(price)
+        ticketPlacediscount.innerHTML = 'biglietto standard'
+        ticketPlacePrice.innerHTML = price + ' €'
+
     }
+    ticketPlaceName.innerHTML = fullName
+    ticketPlaceCpNumber.innerHTML = numberCp
+    ticketPlaceNumberCarriage.innerHTML = numberCarriage
+
 })
 //al click di annulla tutto si cancella
-
-
-//creo il biglietto e mostro il risultato
-
-
+cancelButtonElement.addEventListener("click", function () {
+    fullNameInputElement.value = ""
+    ageSelectElement.value = ''
+    distanceInputElement.value = ''
+    ticketPlaceName.innerHTML = ''
+    ticketPlacediscount.innerHTML = ''
+    ticketPlaceNumberCarriage.innerHTML = ''
+    ticketPlaceCpNumber.innerHTML = ''
+    ticketPlacePrice.innerHTML = ''
+})

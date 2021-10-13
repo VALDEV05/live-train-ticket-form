@@ -39,10 +39,21 @@ label{
 .mt-10{
   margin-top: 10px;
 }
+.mb-10{
+  margin-bottom: 10px;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mt-40{
+  margin-top: 40px;
+}
 .pt-20{
   padding-top: 20px;
 }
-
+div>p{
+  font-weight: bold;
+}
 .btn{
   background-color: #c5c5c5;
   border: 2px solid #757575;
@@ -58,4 +69,28 @@ select{
   border-radius: 5px;
   padding: 0.25px;
   border: 2px solid #B91547;
+}
+.ticket{
+  background-color: white;
+  box-shadow: 5px 5px 5px #585858;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.w-20{
+  padding: 20px 0;
+  width: 17%;
+  height: 80%;
+}
+.container-name{
+  background-color: #585858;
+}
+.container-discount,
+.container-carriage,
+.container-cp-number,
+.container-ticket-price
+{
+  border-top: 1px solid #585858;
+  border-bottom: 1px solid #585858;
 }
