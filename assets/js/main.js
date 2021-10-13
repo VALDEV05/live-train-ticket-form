@@ -22,9 +22,9 @@ const cancelButtonElement = document.getElementById('cancel');
 generateButtonElement.addEventListener("click", function () {
     const fullName = fullNameInputElement.value;
     const age = ageSelectElement.value;
-    const km_da_percorrere = distanceInputElement.value;
+    const km_from_run = distanceInputElement.value;
     //mi stampo in console i valori di input
-    console.log(fullName, km_da_percorrere, age);
+    console.log(fullName, km_from_run, age);
 
 
     /* Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
@@ -33,10 +33,16 @@ generateButtonElement.addEventListener("click", function () {
     - va applicato uno sconto del 40% per gli over 65.
     */
 
+    //calcolo prezzo biglietto con resto in centesimi
+    let price = (km_from_run * 0.21).toFixed(2);
+    console.log(price)
+
+    //calcola il prezzo dei biglietti scontati
+
 })
+//al click di annulla tutto si cancella
 
-// calcolo costo
 
-//creo il biglietto
+//creo il biglietto e mostro il risultato
 
 
