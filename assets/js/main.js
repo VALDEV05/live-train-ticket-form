@@ -35,10 +35,21 @@ generateButtonElement.addEventListener("click", function () {
 
     //calcolo prezzo biglietto con resto in centesimi
     let price = (km_from_run * 0.21).toFixed(2);
-    console.log(price)
 
     //calcola il prezzo dei biglietti scontati
+    if (age == 'minorenne') {
+        console.log('va applicato il 20%')
+        let new_price = (price - (price * 0.20)).toFixed(2)
+        console.log(new_price)
 
+    } else if (age == 'over65') {
+        console.log('va applicato il 40%')
+        let new_price = (price - (price * 0.40)).toFixed(2)
+        console.log(new_price)
+    } else {
+        console.log('nessuno sconto');
+        console.log(price)
+    }
 })
 //al click di annulla tutto si cancella
 
