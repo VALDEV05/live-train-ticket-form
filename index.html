@@ -17,27 +17,28 @@
         <section class="form_wrapper">
             <h1>Calcola il prezzo del tuo biglietto</h1>
 
-            <div class="form">
-                <div class="form_group w-33">
-                    <label for="full-name">Full name</label>
-                    <input type="text" name="full-name" id="full-name">
+            <div class="form mt-10">
+                <div class="form_gruop w-33">
+                    <label for="user_name">Nome Cognome</label>
+                    <input type="text" id="full-name" placeholder=" Scrivi il tuo nome ">
                 </div>
-                <div class="form_group w-33">
-                    <label for="distance">Distance</label>
-                    <input type="number" name="distance" id="distance">
+                <div class="form_gruop w-33">
+                    <label for="distance">Km da percorrere</label>
+                    <input type="number" id="distance" placeholder=" Scrivi la distanza">
                 </div>
-                <div class="form_group w-33">
-                    <label for="age">Age Group</label>
+                <div class="form_gruop w-33">
+                    <label for="age">Fascia d'età</label>
                     <select name="age" id="age">
+                        <option value="" id="select">Seleziona la tua fascia d'età</option>
                         <option value="minorenne">Minorenne</option>
                         <option value="maggiorenne">Maggiorenne</option>
                         <option value="over65">Over 65</option>
                     </select>
                 </div>
+                <div class="button_group  pt-20 w-100">
+                    <button id="generate" class="btn">Genera</button>
+                    <button id="cancel" class="btn">Annulla</button>
 
-                <div class="form_group w-100 mt-3">
-                    <button id="generate" class="btn">Generate</button>
-                    <button id="cancel" class="btn">Cancel</button>
                 </div>
             </div>
 
