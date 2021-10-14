@@ -8,28 +8,7 @@ body {
   background-color: #B91547;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-
-.container {
-  width: 900px;
-  margin: 2rem auto;
-}
-.form_wrapper{  
-  text-align: center;
-}
-.form{
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px #585858;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-label{
-  display: block;
-  padding-bottom: 10px;
-}
+/* common style */
 .w-33{
   width: calc(100% / 3);
 }
@@ -45,14 +24,43 @@ label{
 .mt-20{
   margin-top: 20px;
 }
-.mt-40{
-  margin-top: 40px;
+.mt-70{
+  margin-top: 70px;
 }
 .pt-20{
   padding-top: 20px;
 }
-div>p{
-  font-weight: bold;
+.w-20{
+  padding: 20px 0;
+  width: 15%;
+  height: 75%;
+}
+/* /common style */
+
+.container {
+  width: 900px;
+  margin: 2rem auto;
+}
+section > h1{
+  color: white;
+  text-transform: uppercase;
+}
+/* form */
+.form_wrapper{  
+  text-align: center;
+}
+.form{
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #585858;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+label{
+  display: block;
+  padding-bottom: 10px;
 }
 .btn{
   background-color: #c5c5c5;
@@ -70,27 +78,47 @@ select{
   padding: 0.25px;
   border: 2px solid #B91547;
 }
+
+/* ticket */
 .ticket{
   background-color: white;
   box-shadow: 5px 5px 5px #585858;
-  height: 150px;
+  height: 200px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.w-20{
-  padding: 20px 0;
-  width: 17%;
-  height: 80%;
+div>p{
+  font-weight: bold;
 }
 .container-name{
   background-color: #585858;
+  padding: 20px 0;
+  width: 25%;
+  height: 75%;
+}
+p.name{
+  font-size: 20px;
+}
+#ticket_name{
+  text-transform: capitalize;
+    margin-top: 1px;
+    font-weight: bold;
+    text-align: start;
+    padding-left: 10px;
+    font-size: 20px;
 }
 .container-discount,
 .container-carriage,
 .container-cp-number,
-.container-ticket-price
-{
+.container-ticket-price{
   border-top: 1px solid #585858;
   border-bottom: 1px solid #585858;
+}
+.details{
+    text-align: start;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 70px;
 }
